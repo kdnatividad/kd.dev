@@ -6,16 +6,16 @@ const NavLinks = () => {
   return (
     <div className="flex gap-6">
       <NavLink className="font-sans text-base" to="/">
-        Home
+        home
       </NavLink>
       <NavLink className="no-underline" to="/about">
-        About
+        about
       </NavLink>
       <NavLink className="no-underline" to="/projects">
-        Project
+        project
       </NavLink>
       <NavLink className="no-underline" to="/contact">
-        Contact
+        contact
       </NavLink>
     </div>
   );
