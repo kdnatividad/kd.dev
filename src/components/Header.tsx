@@ -2,8 +2,8 @@ import Nav from "./Nav";
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 z-[1] w-full bg-gray-950 px-[32px] py-4">
-      <div className="max-w-3xl mx-auto">
+    <header className="sticky top-0 z-50 w-full bg-[#020611]/80 backdrop-blur-sm">
+      <div className="max-w-3xl mx-auto px-8 h-[84px] flex items-center">
         <Nav />
       </div>
     </header>
