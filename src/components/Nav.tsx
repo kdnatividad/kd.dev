@@ -1,17 +1,20 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-
+import "../index.css";
 import { Menu, X } from "lucide-react";
 const NavLinks = () => {
   return (
     <div className="flex gap-6">
-      <NavLink className="text-black no-underline" to="/about">
+      <NavLink className="font-sans text-base" to="/">
+        Home
+      </NavLink>
+      <NavLink className="no-underline" to="/about">
         About
       </NavLink>
-      <NavLink className="text-black no-underline" to="/projects">
+      <NavLink className="no-underline" to="/projects">
         Project
       </NavLink>
-      <NavLink className="text-black no-underline" to="/contact">
+      <NavLink className="no-underline" to="/contact">
         Contact
       </NavLink>
     </div>
@@ -19,26 +22,28 @@ const NavLinks = () => {
 };
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleNavBar = () => {
-    setIsOpen(!isOpen);
-  };
-  return (
-    <>
-      <div className="w-1/3 flex justify-end">
-        <div className="hidden md:flex justify-between">
-          <NavLinks />
-        </div>
-        <div className="md:hidden">
-          <button onClick={toggleNavBar}>{isOpen ? <X /> : <Menu />}</button>
+  const toggleNavBar = () => setIsOpen(!isOpen);
 
-          {isOpen && (
-            <div className="absolute right-4 mt-2">
-              <NavLinks />
-            </div>
-          )}
-        </div>
+  return (
+    <nav className="relative w-full flex items-center justify-between">
+      {/* Logo or name */}
+
+      {/* Desktop links */}
+      <div className="hidden md:flex gap-6">
+        <NavLinks />
       </div>
-    </>
+
+      {/* Mobile toggle */}
+      <div className="md:hidden">
+        <button onClick={toggleNavBar}>{isOpen ? <X /> : <Menu />}</button>
+
+        {isOpen && (
+          <div className="absolute right-0 top-8 bg-gray-900 p-4 rounded">
+            <NavLinks />
+          </div>
+        )}
+      </div>
+    </nav>
   );
 };
 export default Nav;

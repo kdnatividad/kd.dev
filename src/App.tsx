@@ -1,13 +1,28 @@
-import Header from "./components/Header";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
 
-import "./App.css";
-
-function App() {
+export default function App() {
   return (
-    <>
-      <Header />
-    </>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route
+          path="/"
+          element={
+            <div>
+              Home
+              <div>
+                <h1 className="text-5xl font-semibold tracking-tight">
+                  HI KEN HERE.
+                </h1>
+              </div>
+            </div>
+          }
+        />
+        <Route path="/about" element={<div>About</div>} />
+        <Route path="/projects" element={<div>Projects</div>} />
+        <Route path="/blog" element={<div>Blog</div>} />
+        <Route path="/contact" element={<div>Contact</div>} />
+      </Route>
+    </Routes>
   );
 }
-
-export default App;
