@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section className="flex items-center justify-between gap-10 py-7">
+    <section className="flex flex-col-reverse items-center gap-10 py-7 md:flex-row md:justify-between">
       <div className="flex flex-col">
         <h1 className="title text-balance text-4xl sm:text-5xl ">
           hi ken here. 👋
