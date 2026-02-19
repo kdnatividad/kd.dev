@@ -20,8 +20,8 @@ const NavLinks = ({ onClick }: { onClick?: () => void }) => {
           onClick={onClick}
           className={({ isActive }) =>
             isActive
-              ? "text-white text-sm"
-              : "text-gray-400 text-sm hover:text-white transition-colors"
+              ? "text-white text-base"
+              : "text-gray-400 text-base hover:text-white transition-colors"
           }
         >
           {link.label}
