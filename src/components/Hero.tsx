@@ -1,10 +1,11 @@
 import Stack from "./photostack/Stack.tsx";
 import coffee from "./photostack/coffee.jpg";
-import airsoft from "./photostack/airsoft.jpg";
+
 import mountain from "./photostack/mountain.jpg";
+import airsoft from "./photostack/airsoft.jpg";
 import grad from "./photostack/grad.jpg";
-import { FileText } from "lucide-react";
-const images = [coffee, mountain, grad, airsoft];
+import { FileText, Github, Mail, Linkedin } from "lucide-react";
+const images = [coffee, airsoft, grad, mountain];
 
 const Hero = () => {
   return (
@@ -20,11 +21,49 @@ const Hero = () => {
           Elementor Pro. Beaver Builder Pro. Performance-first builds. I design,
           develop, optimize — and scale websites that convert.
         </p>
-        <div className="flex gap-3">
-          <button className="flex items-center gap-2 rounded-md border border-gray-400 px-4 py-2 text-sm text-gray-400 hover:border-white hover:text-white transition-colors">
-            Resume
-            <FileText size={16} />
-          </button>
+        <div className="mt-4 flex">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <button className="flex items-center gap-2 rounded-md border border-gray-400 px-4 py-2 text-sm text-gray-400 hover:border-white hover:text-white transition-colors">
+              Resume
+              <FileText size={18} />
+            </button>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/kenneth-dave-natividad-81b525230/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="items-center gap-2 px-4 py-2">
+              <Linkedin
+                size={20}
+                className="text-gray-400 hover:text-white transition-colors"
+              />
+            </button>
+          </a>
+          <a
+            href="https://github.com/kdnatividad"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="items-center gap-2 px-4 py-2">
+              <Github
+                size={20}
+                className="text-gray-400 hover:text-white transition-colors"
+              />
+            </button>
+          </a>
+          <a
+            href="mailto:kdnatividad00@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="flex items-center gap-2 px-4 py-2">
+              <Mail
+                size={20}
+                className="text-gray-400 hover:text-white transition-colors"
+              />
+            </button>
+          </a>
         </div>
       </div>
       <div className="relative grid h-[233px] w-[175px] place-items-center md:mr-8">
