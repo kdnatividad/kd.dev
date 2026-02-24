@@ -9,8 +9,8 @@ const images = [coffee, airsoft, grad, mountain];
 
 const Hero = () => {
   return (
-    <section className="flex flex-col items-start gap-10 py-7 px-5 md:flex-row md:items-start md:justify-between md:px-0">
-      <div className="relative grid h-[233px] w-[175px] place-items-center md:mr-8 md:order-last">
+    <section className="flex flex-col items-start gap-7 py-7 md:flex-row md:items-start md:justify-between">
+      <div className="relative grid h-[235px] w-[175px] place-items-center md:mr-8 md:order-last">
         <Stack
           randomRotation
           sensitivity={230}
@@ -38,6 +38,18 @@ const Hero = () => {
         <p className="mt-4 max-w-sm text-balance text-sm sm:text-base">
           Elementor Pro. Beaver Builder Pro. Performance-first builds. I design,
           develop, optimize — and scale websites that convert.
+        </p>
+        <p className="mt-4 max-w-sm text-balance text-sm sm:text-base font-bold">
+          For Q&A or Meetings, book a meeting with me on
+          <a
+            className="text-{#006bf9}"
+            href="https://calendly.com/kdnatividad00"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            {"Calendly"}
+          </a>
         </p>
         <div className="mt-4 flex">
           <a href="#" target="_blank" rel="noopener noreferrer">
