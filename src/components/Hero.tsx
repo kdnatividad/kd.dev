@@ -9,7 +9,25 @@ const images = [coffee, airsoft, grad, mountain];
 
 const Hero = () => {
   return (
-    <section className="flex flex-col-reverse items-center gap-10 py-7 md:flex-row md:justify-between">
+    <section className="flex flex-col items-start gap-10 py-7 px-5 md:flex-row md:items-start md:justify-between md:px-0">
+      <div className="relative grid h-[233px] w-[175px] place-items-center md:mr-8 md:order-last">
+        <Stack
+          randomRotation
+          sensitivity={230}
+          sendToBackOnClick={true}
+          cards={images.map((src, i) => (
+            <img
+              key={i}
+              src={src}
+              alt={`card-${i + 1}`}
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          ))}
+          autoplay={false}
+          autoplayDelay={3000}
+          pauseOnHover={false}
+        />
+      </div>
       <div className="flex flex-col">
         <h1 className="font-calistoga text-4xl sm:text-5xl ">
           hi ken here. 👋
@@ -65,24 +83,6 @@ const Hero = () => {
             </button>
           </a>
         </div>
-      </div>
-      <div className="relative grid h-[233px] w-[175px] place-items-center md:mr-8">
-        <Stack
-          randomRotation
-          sensitivity={230}
-          sendToBackOnClick={true}
-          cards={images.map((src, i) => (
-            <img
-              key={i}
-              src={src}
-              alt={`card-${i + 1}`}
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
-          ))}
-          autoplay={false}
-          autoplayDelay={3000}
-          pauseOnHover={false}
-        />
       </div>
     </section>
   );

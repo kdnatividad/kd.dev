@@ -5,7 +5,7 @@ export default function Layout() {
   return (
     <div className="min-h-screen bg-gray-950 text-white font-sans">
       <Header /> {/* full width, constrains content inside */}
-      <main className="max-w-3xl mx-auto px-8">
+      <main className="max-w-3xl mx-auto px-5">
         <Outlet />
       </main>
     </div>
