@@ -4,7 +4,7 @@ import deped from "../assets/deped.webp";
 import jnc from "../assets/jnc.webp";
 import eviva from "../assets/eviva.webp";
 import wedodigital from "../assets/wedodigital.webp";
-import blogtec from "../assets/blogtec.webp";
+import Blogtec from "../assets/Blogtec.webp";
 const workData = [
   {
     company: "AG WebWorx",
@@ -28,7 +28,7 @@ const workData = [
     company: "BlogTec",
     role: "Content Management Specialist",
     date: "Nov 2022 - Jul 2023 (Contract)",
-    logo: blogtec,
+    logo: Blogtec,
     bullets: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     ],
