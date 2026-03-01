@@ -42,7 +42,7 @@ const Hero = () => {
         <p className="mt-4 max-w-sm text-balance text-sm sm:text-base font-bold">
           For Q&A or Meetings, book a meeting with me on
           <a
-            className="text-{#006bf9}"
+            className="text-[#006bf9]"
             href="https://calendly.com/kdnatividad00"
             target="_blank"
             rel="noopener noreferrer"
