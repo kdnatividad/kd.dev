@@ -13,7 +13,8 @@ export default {
   			sans: [
   				'Inter',
                     ...defaultTheme.fontFamily.sans
-                ]
+                ],
+				calistoga: ["Calistoga", "serif"],
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
