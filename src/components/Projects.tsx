@@ -1,4 +1,4 @@
-import { Globe, GitBranch } from "lucide-react";
+import { Globe, GitBranch, Briefcase } from "lucide-react";
 import { projectsData } from "./projectsdata";
 
 const iconMap = {
@@ -76,6 +76,10 @@ const Projects = () => {
                     </a>
                   );
                 })}
+                <span className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-md border border-gray-700 text-gray-400">
+                  <Briefcase size={13} />
+                  {project.company}
+                </span>
               </div>
             </div>
           </div>
