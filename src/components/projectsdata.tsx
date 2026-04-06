@@ -3,6 +3,7 @@ export type Project = {
   description: string;
   image: string;
   tags: string[];
+  company: string;
   links: {
     label: string;
     url: string;
@@ -17,6 +18,7 @@ export const projectsData: Project[] = [
       "Short description of what this project does and the problem it solves.",
     image: "",
     tags: ["React", "TypeScript", "TailwindCSS"],
+    company: "AG WebWorx",
     links: [
       { label: "Website", url: "#", icon: "globe" },
       { label: "Source", url: "#", icon: "github" },
@@ -28,6 +30,7 @@ export const projectsData: Project[] = [
       "Short description of what this project does and the problem it solves.",
     image: "",
     tags: ["FastAPI", "Python", "Docker", "PostgreSQL"],
+    company: "JNC Sports PH",
     links: [{ label: "Source", url: "#", icon: "github" }],
   },
 ];
