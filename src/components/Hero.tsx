@@ -53,7 +53,7 @@ const Hero = () => {
         </p>
         <div className="mt-4 flex">
           <a href="#" target="_blank" rel="noopener noreferrer">
-            <button className="flex items-center gap-2 rounded-md border border-gray-400 px-4 py-2 text-sm text-gray-400 hover:border-white hover:text-white transition-colors">
+            <button className="flex items-center gap-2 rounded-md border border-gray-300 dark:border-gray-400 px-4 py-2 text-sm text-gray-500 dark:text-gray-400 hover:border-gray-900 dark:hover:border-white hover:text-gray-900 dark:hover:text-white transition-colors">
               Resume
               <FileText size={18} />
             </button>
@@ -66,7 +66,7 @@ const Hero = () => {
             <button className="items-center gap-2 px-4 py-2">
               <Linkedin
                 size={20}
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               />
             </button>
           </a>
@@ -78,7 +78,7 @@ const Hero = () => {
             <button className="items-center gap-2 px-4 py-2">
               <Github
                 size={20}
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               />
             </button>
           </a>
@@ -90,7 +90,7 @@ const Hero = () => {
             <button className="flex items-center gap-2 px-4 py-2">
               <Mail
                 size={20}
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               />
             </button>
           </a>

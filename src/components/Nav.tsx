@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import "../index.css";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { useTheme } from "../context/ThemeContext";
 
 const links = [
   { to: "/", label: "home" },
@@ -20,8 +21,8 @@ const NavLinks = ({ onClick }: { onClick?: () => void }) => {
           onClick={onClick}
           className={({ isActive }) =>
             isActive
-              ? "text-white text-base"
-              : "text-gray-400 text-base hover:text-white transition-colors"
+              ? "text-gray-900 dark:text-white text-base"
+              : "text-gray-500 dark:text-gray-400 text-base hover:text-gray-900 dark:hover:text-white transition-colors"
           }
         >
           {link.label}
@@ -33,6 +34,7 @@ const NavLinks = ({ onClick }: { onClick?: () => void }) => {
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, toggle } = useTheme();
 
   return (
     <>
@@ -42,18 +44,29 @@ const Nav = () => {
           <NavLinks />
         </div>
 
-        {/* Mobile hamburger — right side */}
-        <button
-          className="md:hidden text-white z-[60] relative ml-auto"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex items-center gap-3 ml-auto">
+          {/* Theme toggle */}
+          <button
+            onClick={toggle}
+            className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
+
+          {/* Mobile hamburger */}
+          <button
+            className="md:hidden text-gray-900 dark:text-white z-[60] relative"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </nav>
 
       {/* Fullscreen overlay */}
       <div
-        className={`fixed inset-0 w-screen h-screen bg-[#020611] z-[100] flex flex-col px-10 pt-32 transition-opacity duration-500 md:hidden ${
+        className={`fixed inset-0 w-screen h-screen bg-white dark:bg-[#020611] z-[100] flex flex-col px-10 pt-32 transition-opacity duration-500 md:hidden ${
           isOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -61,7 +74,7 @@ const Nav = () => {
       >
         {/* X button inside overlay, top right */}
         <button
-          className="absolute top-6 right-6 text-white"
+          className="absolute top-6 right-6 text-gray-900 dark:text-white"
           onClick={() => setIsOpen(false)}
         >
           <X size={24} />
@@ -75,7 +88,9 @@ const Nav = () => {
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
                   `text-4xl font-bold uppercase tracking-tight transition-colors ${
-                    isActive ? "text-white" : "text-gray-500 hover:text-white"
+                    isActive
+                      ? "text-gray-900 dark:text-white"
+                      : "text-gray-400 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white"
                   }`
                 }
                 style={{ transitionDelay: isOpen ? `${i * 60}ms` : "0ms" }}

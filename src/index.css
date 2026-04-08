@@ -10,6 +10,10 @@
 html,
 body {
   font-family: Inter, system-ui, sans-serif;
+  background-color: #f9fafb;
+}
+html.dark,
+html.dark body {
   background-color: #030712;
 }
   :root {
