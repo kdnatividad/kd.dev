@@ -9,13 +9,13 @@ const iconMap = {
 const Projects = () => {
   return (
     <main className="flex flex-col gap-8">
-      <h1 className="text-4xl font-bold">my projects.</h1>
+      <h1 className="font-calistoga text-4xl">my projects.</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {projectsData.map((project, i) => (
           <div
             key={i}
-            className="flex flex-col rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden bg-white/60 dark:bg-gray-900/40"
+            className="flex flex-col rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden bg-white dark:bg-gray-900/40 shadow-sm dark:shadow-none"
           >
             <div className="w-full aspect-video bg-gray-100 dark:bg-gray-800 overflow-hidden">
               {project.image ? (
@@ -57,7 +57,7 @@ const Projects = () => {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:border-gray-400 dark:hover:border-gray-500 transition-colors"
+                      className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-md bg-gray-900 text-white dark:bg-transparent dark:border dark:border-gray-700 dark:text-gray-300 hover:bg-gray-700 dark:hover:text-white dark:hover:border-gray-500 transition-colors"
                     >
                       <Icon size={13} />
                       {link.label}

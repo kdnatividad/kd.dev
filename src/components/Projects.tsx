@@ -10,7 +10,7 @@ const Projects = () => {
   return (
     <section className="flex flex-col gap-6">
       <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-bold">featured projects</h2>
+        <h2 className="font-calistoga text-2xl">featured projects</h2>
         <a
           href="/projects"
           className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors flex items-center gap-1"
@@ -23,7 +23,7 @@ const Projects = () => {
         {projectsData.map((project, i) => (
           <div
             key={i}
-            className="flex flex-col rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden bg-white/60 dark:bg-gray-900/40"
+            className="flex flex-col rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden bg-white dark:bg-gray-900/40 shadow-sm dark:shadow-none"
           >
             {/* Preview image */}
             <div className="w-full aspect-video bg-gray-100 dark:bg-gray-800 overflow-hidden">
@@ -69,7 +69,7 @@ const Projects = () => {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:border-gray-400 dark:hover:border-gray-500 transition-colors"
+                      className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-md bg-gray-900 text-white dark:bg-transparent dark:border dark:border-gray-700 dark:text-gray-300 hover:bg-gray-700 dark:hover:text-white dark:hover:border-gray-500 transition-colors"
                     >
                       <Icon size={13} />
                       {link.label}

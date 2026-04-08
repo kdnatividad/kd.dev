@@ -7,7 +7,7 @@ const Blogs = () => {
   return (
     <section className="flex flex-col gap-6">
       <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-bold">recent posts</h2>
+        <h2 className="font-calistoga text-2xl">recent posts</h2>
         <a
           href="/blog"
           className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors flex items-center gap-1"
@@ -16,12 +16,12 @@ const Blogs = () => {
         </a>
       </div>
 
-      <div className="flex flex-col gap-px rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+      <div className="flex flex-col gap-px rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden shadow-sm dark:shadow-none">
         {blogsData.map((post, i) => (
           <a
             key={i}
             href={post.url}
-            className="flex gap-6 justify-between p-5 bg-white/60 dark:bg-gray-900/40 hover:bg-gray-100/80 dark:hover:bg-gray-800/60 transition-colors group"
+            className="flex gap-6 justify-between p-5 bg-white dark:bg-gray-900/40 hover:bg-gray-50 dark:hover:bg-gray-800/60 transition-colors group"
           >
             {/* Left: title, description, tags */}
             <div className="flex flex-col gap-2 min-w-0">
