@@ -183,7 +183,7 @@ export default function Stack({
               className="card"
               onClick={() => shouldEnableClick && sendToBack(card.id)}
               animate={{
-                rotateZ: (stack.length - index - 1) * 4 + randomRotate,
+                rotateZ: (stack.length - index - 1) * 7 + randomRotate,
                 scale: 1 + index * 0.06 - stack.length * 0.06,
                 transformOrigin: "90% 90%",
               }}
