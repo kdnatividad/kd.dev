@@ -13,15 +13,23 @@ export type Project = {
 
 export const projectsData: Project[] = [
   {
-    title: "Project One",
+    title: "LA Scraper",
     description:
-      "Short description of what this project does and the problem it solves.",
-    image: "",
-    tags: ["React", "TypeScript", "TailwindCSS"],
-    company: "AG WebWorx",
+      "AI-powered scraper that extracts sports org website content — staff, programs, athletes, and more — structured and ready for LeagueApps.",
+    image: "/projects/la-scraper/la-scraper-ft.png",
+    tags: ["Next.js", "TypeScript", "TailwindCSS", "Supabase"],
+    company: "LeagueApps",
     links: [
-      { label: "Website", url: "#", icon: "globe" },
-      { label: "Source", url: "#", icon: "github" },
+      {
+        label: "Website",
+        url: "https://la-scraper-theta.vercel.app/",
+        icon: "globe",
+      },
+      {
+        label: "Source",
+        url: "https://github.com/kdnatividad/la-scraper",
+        icon: "github",
+      },
     ],
   },
   {

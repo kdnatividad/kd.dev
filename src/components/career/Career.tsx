@@ -28,7 +28,7 @@ const Work = () => {
             {workData.map((job, i) => (
               <div key={i} className="flex gap-4 relative">
                 {i !== workData.length - 1 && (
-                  <div className="absolute left-5 top-10 bottom-[-32px] w-px bg-gray-200 dark:bg-gray-700" />
+                  <div className="absolute left-5 top-5 bottom-[-52px] w-px bg-gray-200 dark:bg-gray-700" />
                 )}
 
                 <div className="w-10 h-10 rounded-full overflow-hidden shrink-0 border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 z-10">
@@ -66,8 +66,8 @@ const Work = () => {
           <div className="flex flex-col gap-8">
             {educData.map((school, i) => (
               <div key={i} className="flex gap-4 relative">
-                {i !== workData.length - 1 && (
-                  <div className="absolute left-5 top-10 bottom-[-25px] w-px bg-gray-200 dark:bg-gray-700" />
+                {i !== educData.length - 1 && (
+                  <div className="absolute left-5 top-5 bottom-[-52px] w-px bg-gray-200 dark:bg-gray-700" />
                 )}
 
                 <div className="w-10 h-10 rounded-full overflow-hidden shrink-0 border border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 z-10">
